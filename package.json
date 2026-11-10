@@ -1,0 +1,31 @@
+{
+  "name": "simple-plotter-starter",
+  "version": "1.0.0",
+  "description": "A very basic P5 Environment that outputs SVGs.",
+  "homepage": "https://github.com/lostPixels/simple-plotter-starter#readme",
+  "bugs": {
+    "url": "https://github.com/lostPixels/simple-plotter-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostPixels/simple-plotter-starter.git"
+  },
+  "license": "ISC",
+  "author": "James Merrill",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy:libs": "rm -rf public/lib && mkdir -p public/lib && cp node_modules/p5/lib/p5.js public/lib/ && cp node_modules/p5.js-svg/dist/p5.svg.js public/lib/",
+    "predev": "npm run copy:libs",
+    "prebuild": "npm run copy:libs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "p5": "1.9",
+    "p5.js-svg": "^1.6.0",
+    "vite": "^8.3.7"
+  }
+}
